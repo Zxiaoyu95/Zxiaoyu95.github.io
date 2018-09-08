@@ -91,8 +91,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/m/song?id=812400&userid=301971782"><br></iframe></p>
-<h2 id="Dnsenum命令信息收集"><a href="#Dnsenum命令信息收集" class="headerlink" title="Dnsenum命令信息收集"></a>Dnsenum命令信息收集</h2><h3 id="打开到目录-pentest-enumeration-dns-dnsenum下"><a href="#打开到目录-pentest-enumeration-dns-dnsenum下" class="headerlink" title="打开到目录/pentest/enumeration/dns/dnsenum下"></a>打开到目录/pentest/enumeration/dns/dnsenum下</h3><h4 id="首先先查看目的域名-如163-com-的dns服务器名"><a href="#首先先查看目的域名-如163-com-的dns服务器名" class="headerlink" title="首先先查看目的域名(如163.com)的dns服务器名"></a>首先先查看目的域名(如163.com)的dns服务器名</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl 163.com</span><br></pre></td></tr></table></figure>
+        <h2 id="Dnsenum命令信息收集"><a href="#Dnsenum命令信息收集" class="headerlink" title="Dnsenum命令信息收集"></a>Dnsenum命令信息收集</h2><h3 id="打开到目录-pentest-enumeration-dns-dnsenum下"><a href="#打开到目录-pentest-enumeration-dns-dnsenum下" class="headerlink" title="打开到目录/pentest/enumeration/dns/dnsenum下"></a>打开到目录/pentest/enumeration/dns/dnsenum下</h3><h4 id="首先先查看目的域名-如163-com-的dns服务器名"><a href="#首先先查看目的域名-如163-com-的dns服务器名" class="headerlink" title="首先先查看目的域名(如163.com)的dns服务器名"></a>首先先查看目的域名(如163.com)的dns服务器名</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl 163.com</span><br></pre></td></tr></table></figure>
 <p><img src="/2018/09/08/bt5-1/images/163_dns.PNG" alt="&quot;163.com服务器名称及地址&quot;"></p>
 <h4 id="之后通过Dnsenum命令根据搜索文档dns-txt暴力收集信息"><a href="#之后通过Dnsenum命令根据搜索文档dns-txt暴力收集信息" class="headerlink" title="之后通过Dnsenum命令根据搜索文档dns.txt暴力收集信息"></a>之后通过Dnsenum命令根据搜索文档dns.txt暴力收集信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl -f dns.txt -dnsserver ns1.nease.net 163.com -o 163.txt</span><br></pre></td></tr></table></figure>
 <p><img src="/2018/09/08/bt5-1/images/163_server.PNG" alt="&quot;文档匹配163.com服务器名称及地址&quot;"></p>
@@ -100,7 +99,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Zxiaoyu95.github.io/2018/09/08/bt5-1/" data-id="cjlt985fv0001q0uwwc69v89w" class="article-share-link">Share</a>
+      <a data-url="http://Zxiaoyu95.github.io/2018/09/08/bt5-1/" data-id="cjlt9aqkc0000vkuwnapd5uqb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -145,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Zxiaoyu95.github.io/2018/09/07/hello-world/" data-id="cjlt985fm0000q0uwawrp5cid" class="article-share-link">Share</a>
+      <a data-url="http://Zxiaoyu95.github.io/2018/09/07/hello-world/" data-id="cjlt9aqkj0001vkuwoj6997f2" class="article-share-link">Share</a>
       
       
     </footer>
