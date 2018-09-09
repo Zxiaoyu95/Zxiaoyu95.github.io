@@ -5,19 +5,19 @@
   
 
   
-  <title>bt5-2 | 子非鱼博客</title>
+  <title>bt5之扫描工具 | 子非鱼博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习点滴">
+  <meta name="description" content="一.主机发现1.arping对直连网络，使用ARP request进行测试，一个特定IP是否正在被使用1arping -c 3 220.181.29.130 2.fping使用ICMP ECHO一次性请求多个主机1fping -s -r 1 -g 192.168.0.1 192.168.0.254 3.genlist获取使用清单，通过ping探针的响应1genlist -s 192.168.0.\">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bt5-2">
+<meta property="og:title" content="bt5之扫描工具">
 <meta property="og:url" content="http://Zxiaoyu95.github.io/2018/09/09/bt5-2/index.html">
 <meta property="og:site_name" content="子非鱼博客">
-<meta property="og:description" content="记录学习点滴">
+<meta property="og:description" content="一.主机发现1.arping对直连网络，使用ARP request进行测试，一个特定IP是否正在被使用1arping -c 3 220.181.29.130 2.fping使用ICMP ECHO一次性请求多个主机1fping -s -r 1 -g 192.168.0.1 192.168.0.254 3.genlist获取使用清单，通过ping探针的响应1genlist -s 192.168.0.\">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-08T16:41:45.073Z">
+<meta property="og:updated_time" content="2018-09-09T04:08:50.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bt5-2">
-<meta name="twitter:description" content="记录学习点滴">
+<meta name="twitter:title" content="bt5之扫描工具">
+<meta name="twitter:description" content="一.主机发现1.arping对直连网络，使用ARP request进行测试，一个特定IP是否正在被使用1arping -c 3 220.181.29.130 2.fping使用ICMP ECHO一次性请求多个主机1fping -s -r 1 -g 192.168.0.1 192.168.0.254 3.genlist获取使用清单，通过ping探针的响应1genlist -s 192.168.0.\">
   
     <link rel="alternate" href="/atom.xml" title="子非鱼博客" type="application/atom+xml">
   
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      bt5-2
+      bt5之扫描工具
     </h1>
   
 
@@ -90,11 +90,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="一-主机发现"><a href="#一-主机发现" class="headerlink" title="一.主机发现"></a>一.主机发现</h2><h4 id="1-arping"><a href="#1-arping" class="headerlink" title="1.arping"></a>1.arping</h4><h4 id="对直连网络，使用ARP-request进行测试，一个特定IP是否正在被使用"><a href="#对直连网络，使用ARP-request进行测试，一个特定IP是否正在被使用" class="headerlink" title="对直连网络，使用ARP request进行测试，一个特定IP是否正在被使用"></a>对直连网络，使用ARP request进行测试，一个特定IP是否正在被使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arping -c 3 220.181.29.130</span><br></pre></td></tr></table></figure>
+<h4 id="2-fping"><a href="#2-fping" class="headerlink" title="2.fping"></a>2.fping</h4><h4 id="使用ICMP-ECHO一次性请求多个主机"><a href="#使用ICMP-ECHO一次性请求多个主机" class="headerlink" title="使用ICMP ECHO一次性请求多个主机"></a>使用ICMP ECHO一次性请求多个主机</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fping -s -r 1 -g 192.168.0.1 192.168.0.254</span><br></pre></td></tr></table></figure>
+<h4 id="3-genlist"><a href="#3-genlist" class="headerlink" title="3.genlist"></a>3.genlist</h4><h4 id="获取使用清单，通过ping探针的响应"><a href="#获取使用清单，通过ping探针的响应" class="headerlink" title="获取使用清单，通过ping探针的响应"></a>获取使用清单，通过ping探针的响应</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genlist -s 192.168.0.\*</span><br></pre></td></tr></table></figure>
+<h4 id="4-hping3-太复杂"><a href="#4-hping3-太复杂" class="headerlink" title="4.hping3(太复杂)"></a>4.hping3(太复杂)</h4><h4 id="支持发送自定义包和目标的回应，它支持TCP，UDP，ICMP和RAW-IP协议"><a href="#支持发送自定义包和目标的回应，它支持TCP，UDP，ICMP和RAW-IP协议" class="headerlink" title="支持发送自定义包和目标的回应，它支持TCP，UDP，ICMP和RAW-IP协议"></a>支持发送自定义包和目标的回应，它支持TCP，UDP，ICMP和RAW-IP协议</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hping3</span><br><span class="line">hping send&#123;ip(daddr=192.168.0.10)+icmp(<span class="built_in">type</span>=8,code=0)&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-nbtscan"><a href="#5-nbtscan" class="headerlink" title="5.nbtscan"></a>5.nbtscan</h4><h4 id="扫描一个IP地址范围的NetBIOS名字信息，它将提供一个个关于IP地址，NetBIOS计算机名，服务可用性，登录用户名和MAC地址的报告"><a href="#扫描一个IP地址范围的NetBIOS名字信息，它将提供一个个关于IP地址，NetBIOS计算机名，服务可用性，登录用户名和MAC地址的报告" class="headerlink" title="扫描一个IP地址范围的NetBIOS名字信息，它将提供一个个关于IP地址，NetBIOS计算机名，服务可用性，登录用户名和MAC地址的报告"></a>扫描一个IP地址范围的NetBIOS名字信息，它将提供一个个关于IP地址，NetBIOS计算机名，服务可用性，登录用户名和MAC地址的报告</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nbtscan 192.168.0.1-254</span><br></pre></td></tr></table></figure>
+<h4 id="6-nping"><a href="#6-nping" class="headerlink" title="6.nping"></a>6.nping</h4><h4 id="允许用户产生各种网络数据包（TCP，UDP，ICMP，ARP），也允许用户自定义协议头部，例如-源和目的，TCP和UDP端口号"><a href="#允许用户产生各种网络数据包（TCP，UDP，ICMP，ARP），也允许用户自定义协议头部，例如-源和目的，TCP和UDP端口号" class="headerlink" title="允许用户产生各种网络数据包（TCP，UDP，ICMP，ARP），也允许用户自定义协议头部，例如 源和目的，TCP和UDP端口号"></a>允许用户产生各种网络数据包（TCP，UDP，ICMP，ARP），也允许用户自定义协议头部，例如 源和目的，TCP和UDP端口号</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nping -c 1 --tcp -p 80 --flags syn 192.168.0.10</span><br><span class="line">nping -c 1 --tcp -p 80 --flags ack 192.168.0.10  (reset)</span><br><span class="line">nping -c 1 --udp -p 80 192.168.0.10  (ICMP Port unreachable)</span><br></pre></td></tr></table></figure>
+<h4 id="7-onesixtyone"><a href="#7-onesixtyone" class="headerlink" title="7.onesixtyone"></a>7.onesixtyone</h4><h4 id="它是一个snmp扫描工具，用于找出设备上的SNMP-Community字串，扫描速度非常快"><a href="#它是一个snmp扫描工具，用于找出设备上的SNMP-Community字串，扫描速度非常快" class="headerlink" title="它是一个snmp扫描工具，用于找出设备上的SNMP Community字串，扫描速度非常快"></a>它是一个snmp扫描工具，用于找出设备上的SNMP Community字串，扫描速度非常快</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /pentest/enumeration/snmp/onesixtyone/</span><br><span class="line">dir</span><br><span class="line">./onesixtyone -c dict.txt 192.168.0.10</span><br></pre></td></tr></table></figure>
+<h4 id="8-protos"><a href="#8-protos" class="headerlink" title="8.protos"></a>8.protos</h4><h4 id="主要用于扫描特定主机（路由器）上所支持的协议"><a href="#主要用于扫描特定主机（路由器）上所支持的协议" class="headerlink" title="主要用于扫描特定主机（路由器）上所支持的协议"></a>主要用于扫描特定主机（路由器）上所支持的协议</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /pentest/enumeration/iraps/</span><br><span class="line">./protos -i eth1 -d 192.168.0.10 -v</span><br></pre></td></tr></table></figure>
+<h2 id="二-操作系统指纹"><a href="#二-操作系统指纹" class="headerlink" title="二.操作系统指纹"></a>二.操作系统指纹</h2><h4 id="1-p0f"><a href="#1-p0f" class="headerlink" title="1.p0f"></a>1.p0f</h4><h4 id="一个被动的操作系统指纹监控工具，Cisco-IPS就是用这个程序获取目标的操作系统"><a href="#一个被动的操作系统指纹监控工具，Cisco-IPS就是用这个程序获取目标的操作系统" class="headerlink" title="一个被动的操作系统指纹监控工具，Cisco IPS就是用这个程序获取目标的操作系统"></a>一个被动的操作系统指纹监控工具，Cisco IPS就是用这个程序获取目标的操作系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /pentest/enumeration/iraps/</span><br><span class="line">p0f</span><br></pre></td></tr></table></figure>
+<h4 id="2-Xprobe2-功能强大"><a href="#2-Xprobe2-功能强大" class="headerlink" title="2.Xprobe2(功能强大)"></a>2.Xprobe2(功能强大)</h4><h4 id="主动os指纹探测工具"><a href="#主动os指纹探测工具" class="headerlink" title="主动os指纹探测工具"></a>主动os指纹探测工具</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xprobe2 192.168.0.10</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Zxiaoyu95.github.io/2018/09/09/bt5-2/" data-id="cjltnughj0001j8uwoyrkfnfr" class="article-share-link">Share</a>
+      <a data-url="http://Zxiaoyu95.github.io/2018/09/09/bt5-2/" data-id="cjlucbzc60001g4uwvtr0dgm4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,7 +152,7 @@
       <ul>
         
           <li>
-            <a href="/2018/09/09/bt5-2/">bt5-2</a>
+            <a href="/2018/09/09/bt5-2/">bt5之扫描工具</a>
           </li>
         
           <li>
