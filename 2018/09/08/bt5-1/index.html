@@ -197,14 +197,14 @@
             </div>
             <h2 class="post-title">bt5之信息收集</h2>
             <div class="post-meta">
-                本文总共203个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共212个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <h2 id="Dnsenum命令信息收集"><a href="#Dnsenum命令信息收集" class="headerlink" title="Dnsenum命令信息收集"></a>Dnsenum命令信息收集</h2><h3 id="打开到目录-pentest-enumeration-dns-dnsenum下"><a href="#打开到目录-pentest-enumeration-dns-dnsenum下" class="headerlink" title="打开到目录/pentest/enumeration/dns/dnsenum下"></a>打开到目录/pentest/enumeration/dns/dnsenum下</h3><h4 id="首先先查看目的域名-如163-com-的dns服务器名"><a href="#首先先查看目的域名-如163-com-的dns服务器名" class="headerlink" title="首先先查看目的域名(如163.com)的dns服务器名"></a>首先先查看目的域名(如163.com)的dns服务器名</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl 163.com</span><br></pre></td></tr></table></figure>
 <p><img src="/2018/09/08/bt5-1/163_dns.PNG" alt="&quot;163.com服务器名称及地址&quot;"></p>
 <h4 id="之后通过Dnsenum命令根据搜索文档dns-txt暴力收集信息"><a href="#之后通过Dnsenum命令根据搜索文档dns-txt暴力收集信息" class="headerlink" title="之后通过Dnsenum命令根据搜索文档dns.txt暴力收集信息"></a>之后通过Dnsenum命令根据搜索文档dns.txt暴力收集信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl -f dns.txt -dnsserver ns1.nease.net 163.com -o 163.txt</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/09/08/bt5-1/163_server.PNG" alt="&quot;文档匹配163.com服务器名称及地址&quot;"></p>
+<p><img src="/2018/09/08/bt5-1/163_server.PNG" alt="&quot;文档匹配163.com服务器名称及地址&quot;"><br><span id="busuanzi_container_page_pv"><br>  本文总阅读量<span id="busuanzi_value_page_pv"></span>次<br></span></p>
 
         </div>
         <div class="post-tool">
