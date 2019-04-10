@@ -49,7 +49,7 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>bt5之信息收集 - 子非鱼博客</title>
+<title>归档集- 2019/4 - 子非鱼博客</title>
 
 <meta name="keywords" content="">
 
@@ -120,30 +120,8 @@
 </div>
             <div class="page-title">
     <ul>
-        <li><a href="/">最新</a></li>
-        
-            
-                <li class="">
-                    <a href="/categories/bt5" data-name="BT5专栏">BT5专栏</a>
-                </li>
-            
-                <li class="">
-                    <a href="/categories/front-end" data-name="前端">前端</a>
-                </li>
-            
-                <li class="">
-                    <a href="/categories/backstage" data-name="后台">后台</a>
-                </li>
-            
-                <li class="">
-                    <a href="/categories/technology" data-name="技术硬菜">技术硬菜</a>
-                </li>
-            
-                <li class="">
-                    <a href="/categories/resource" data-name="资源">资源</a>
-                </li>
-            
-        
+        <li><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
         <li class="page-search">
     <form id="search" class="search-form">
         <label for="s" class="sr-only">Input Search key Words Here</label>
@@ -185,45 +163,76 @@
 <div class="main-inner">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
-            <div class="post-author clearfix">
-                <a class="avatar fleft" href="" target="_blank">
-                    <img width="48" src="" alt="avatar"/>
-                </a>
-                <p><span class="label">作者</span>
-                    <a href="" target="_blank"></a>
-                    <span title="最后编辑于2018-09-08">2018-09-08</span>
-                </p>
-                <p></p>
+            <h3 class="post-title">坦率的讲 - 本站目前共计6篇文章</h3>
+        </div>
+        <p><img src="/images/category-bg.jpg" alt="category-bg"></p>
+        <div class="post-content markdown-body" itemprop="articleBody">
+            <div class="archives">
+                
+                
+                
+                
+                
+                <div class="archives-item">
+                    <h2>2019年04月</h2>
+                    <ul class="archives_list">
+                        
+                        <li>10日17:59:33
+                            <a href="/2019/04/10/Hadoop1-x集群搭建/">Hadoop1.x集群搭建</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                
+                
+                
+                
+                <div class="archives-item">
+                    <h2>2018年09月</h2>
+                    <ul class="archives_list">
+                        
+                        <li>11日23:15:14
+                            <a href="/2018/09/11/papers/">第24届 ACM计算机与通信安全会议论文</a>
+                        </li>
+                        
+                
+                
+                
+                        <li>09日13:13:14
+                            <a href="/2018/09/09/resourse/">BT5 win2003 winxp ictf2011 资源分享</a>
+                        </li>
+                        
+                
+                
+                
+                        <li>09日00:41:45
+                            <a href="/2018/09/09/bt5-2/">bt5之扫描工具</a>
+                        </li>
+                        
+                
+                
+                
+                        <li>08日00:10:34
+                            <a href="/2018/09/08/bt5-1/">bt5之信息收集</a>
+                        </li>
+                        
+                
+                
+                
+                        <li>07日18:00:48
+                            <a href="/2018/09/07/hello-world/">Hello World</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                
             </div>
-            <h2 class="post-title">bt5之信息收集</h2>
-            <div class="post-meta">
-                本文总共212个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
-            </div>
         </div>
-        <div class="post-content markdown-body">
-            <h2 id="Dnsenum命令信息收集"><a href="#Dnsenum命令信息收集" class="headerlink" title="Dnsenum命令信息收集"></a>Dnsenum命令信息收集</h2><h3 id="打开到目录-pentest-enumeration-dns-dnsenum下"><a href="#打开到目录-pentest-enumeration-dns-dnsenum下" class="headerlink" title="打开到目录/pentest/enumeration/dns/dnsenum下"></a>打开到目录/pentest/enumeration/dns/dnsenum下</h3><h4 id="首先先查看目的域名-如163-com-的dns服务器名"><a href="#首先先查看目的域名-如163-com-的dns服务器名" class="headerlink" title="首先先查看目的域名(如163.com)的dns服务器名"></a>首先先查看目的域名(如163.com)的dns服务器名</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl 163.com</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/09/08/bt5-1/163_dns.PNG" alt="&quot;163.com服务器名称及地址&quot;"></p>
-<h4 id="之后通过Dnsenum命令根据搜索文档dns-txt暴力收集信息"><a href="#之后通过Dnsenum命令根据搜索文档dns-txt暴力收集信息" class="headerlink" title="之后通过Dnsenum命令根据搜索文档dns.txt暴力收集信息"></a>之后通过Dnsenum命令根据搜索文档dns.txt暴力收集信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dnsenum.pl -f dns.txt -dnsserver ns1.nease.net 163.com -o 163.txt</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/09/08/bt5-1/163_server.PNG" alt="&quot;文档匹配163.com服务器名称及地址&quot;"><br><span id="busuanzi_container_page_pv"><br>  本文总阅读量<span id="busuanzi_value_page_pv"></span>次<br></span></p>
-
-        </div>
-        <div class="post-tool">
-            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
-                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
-            </a>
-        </div>
-        
-        <div class="post-tags">Tags：
-            
-        </div>
-        
     </article>
-    
-    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
-    
-    
 </div>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">
