@@ -21,7 +21,7 @@
 //                            `=---='
 //                 拦截插件累计拦截逗比攻击"1381438"次！
 //         .............................................
-//                  佛祖保佑             永无BUG
+//                  佛祖保佑小宇             永无BUG
 //          佛曰:
 //                  写字楼里写字间，写字间里程序员；
 //                  程序人员写程序，又拿程序换酒钱。
@@ -59,9 +59,9 @@
 <div id="nav">
     <nav class="nav-menu">
         <a class="site-name current" href="/" title="说">说</a>
-        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
-        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
-        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
         <!-- custom single page of menus -->
         
         
@@ -86,9 +86,9 @@
     <div class="cover-img"></div>
     <div class="cover-info">
         
-        <h1 class="cover-siteName">说IT</h1>
-        <h3 class="cover-siteTitle">做产品，写代码</h3>
-        <p class="cover-siteDesc">一个关注信息安全技术与人文的IT博客</p>
+        <h1 class="cover-siteName">Leo说IT</h1>
+        <h3 class="cover-siteTitle">认真做研究，搞科研</h3>
+        <p class="cover-siteDesc">一个关注网络信息安全技术的IT小博客</p>
         <div class="cover-sns">
             
             <div class="btn btn-telegram">
@@ -146,15 +146,15 @@
         
         <li class="page-search">
     <form id="search" class="search-form">
-        <label for="s" class="sr-only">请输入关键字</label>
-        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
-        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+        <label for="s" class="sr-only">Input Search key Words Here</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Input Search key Words Here" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -166,11 +166,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(无标题)',
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -197,16 +197,16 @@
             </div>
             <h2 class="post-title">Hadoop1.x集群搭建</h2>
             <div class="post-meta">
-                本文总共3142个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共3158个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的-现在网上教程一般都是hadoop2-X-，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu-linux环境下）"><a href="#最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的-现在网上教程一般都是hadoop2-X-，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu-linux环境下）" class="headerlink" title="最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的(现在网上教程一般都是hadoop2.X)，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu linux环境下）"></a>最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的(现在网上教程一般都是hadoop2.X)，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu linux环境下）</h2><h4 id="在linux终端下键入以下命令"><a href="#在linux终端下键入以下命令" class="headerlink" title="在linux终端下键入以下命令"></a>在linux终端下键入以下命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
-<h3 id="如果你的机器已经配好java环境，那么将会出现你的java版本号"><a href="#如果你的机器已经配好java环境，那么将会出现你的java版本号" class="headerlink" title="如果你的机器已经配好java环境，那么将会出现你的java版本号"></a>如果你的机器已经配好java环境，那么将会出现你的java版本号</h3><h4 id="如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：https-blog-csdn-net-u011495642-article-details-83067316"><a href="#如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：https-blog-csdn-net-u011495642-article-details-83067316" class="headerlink" title="如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：https://blog.csdn.net/u011495642/article/details/83067316"></a>如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：<a href="https://blog.csdn.net/u011495642/article/details/83067316" target="_blank" rel="noopener">https://blog.csdn.net/u011495642/article/details/83067316</a></h4><h2 id="二-设置集群专用账户"><a href="#二-设置集群专用账户" class="headerlink" title="二.设置集群专用账户"></a>二.设置集群专用账户</h2><h3 id="添加用户和用户组"><a href="#添加用户和用户组" class="headerlink" title="添加用户和用户组"></a>添加用户和用户组</h3><h4 id="如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户"><a href="#如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户" class="headerlink" title="如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户"></a>如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo addgroup hd</span><br><span class="line">$ sudo adduser --ingroup hd hadoop</span><br></pre></td></tr></table></figure>
+            <h3 id="引言：-最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的-现在网上教程一般都是hadoop2-X-，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu-linux环境下）"><a href="#引言：-最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的-现在网上教程一般都是hadoop2-X-，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu-linux环境下）" class="headerlink" title="引言： 最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的(现在网上教程一般都是hadoop2.X)，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu linux环境下）"></a>引言： 最近实验室一直在用hadoop集群跑实验，原来一直感觉搭建老版本集群是有点复杂的(现在网上教程一般都是hadoop2.X)，所以想通过这篇文章温故一下当初的搭建过程（在ubuntu linux环境下）</h3><h2 id="一-检查本机java环境"><a href="#一-检查本机java环境" class="headerlink" title="一.检查本机java环境"></a>一.检查本机java环境</h2><h4 id="在linux终端下键入以下命令"><a href="#在linux终端下键入以下命令" class="headerlink" title="在linux终端下键入以下命令"></a>在linux终端下键入以下命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
+<h3 id="如果你的机器已经配好java环境，那么将会出现你的java版本号"><a href="#如果你的机器已经配好java环境，那么将会出现你的java版本号" class="headerlink" title="如果你的机器已经配好java环境，那么将会出现你的java版本号"></a>如果你的机器已经配好java环境，那么将会出现你的java版本号</h3><h4 id="如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：https-blog-csdn-net-u011495642-article-details-83067316"><a href="#如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：https-blog-csdn-net-u011495642-article-details-83067316" class="headerlink" title="如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：https://blog.csdn.net/u011495642/article/details/83067316"></a>如果显示无效指令，则需要安装JDK（推荐OpenJDK）详见链接：<a href="https://blog.csdn.net/u011495642/article/details/83067316" target="_blank" rel="noopener">https://blog.csdn.net/u011495642/article/details/83067316</a></h4><h3 id="二-设置集群专用账户"><a href="#二-设置集群专用账户" class="headerlink" title="二.设置集群专用账户"></a>二.设置集群专用账户</h3><h3 id="添加用户和用户组"><a href="#添加用户和用户组" class="headerlink" title="添加用户和用户组"></a>添加用户和用户组</h3><h4 id="如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户"><a href="#如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户" class="headerlink" title="如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户"></a>如果有必要，可以先添加hd用户组，然后在这个用户组中天健hadoop用户</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo addgroup hd</span><br><span class="line">$ sudo adduser --ingroup hd hadoop</span><br></pre></td></tr></table></figure>
 <h4 id="然后为新的用户添加sudo权限"><a href="#然后为新的用户添加sudo权限" class="headerlink" title="然后为新的用户添加sudo权限"></a>然后为新的用户添加sudo权限</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo visudo</span><br></pre></td></tr></table></figure>
 <h3 id="打开etc-sudoers微信的用户添加sudo权限"><a href="#打开etc-sudoers微信的用户添加sudo权限" class="headerlink" title="打开etc/sudoers微信的用户添加sudo权限"></a>打开etc/sudoers微信的用户添加sudo权限</h3><h4 id="找到以下内容"><a href="#找到以下内容" class="headerlink" title="找到以下内容"></a>找到以下内容</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## User privilege specification</span></span><br><span class="line">root ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
 <h4 id="在其的下方添加："><a href="#在其的下方添加：" class="headerlink" title="在其的下方添加："></a>在其的下方添加：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
-<h3 id="之后就可以通过su-hadoop-切换到该用户"><a href="#之后就可以通过su-hadoop-切换到该用户" class="headerlink" title="之后就可以通过su hadoop 切换到该用户"></a>之后就可以通过su hadoop 切换到该用户</h3><h2 id="三-配置host文件将不同主机链接起来"><a href="#三-配置host文件将不同主机链接起来" class="headerlink" title="三.配置host文件将不同主机链接起来"></a>三.配置host文件将不同主机链接起来</h2><h2 id="由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3-通过修改hostname"><a href="#由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3-通过修改hostname" class="headerlink" title="由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3(通过修改hostname)"></a>由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3(通过修改hostname)</h2><h4 id="在每台机器的上键入"><a href="#在每台机器的上键入" class="headerlink" title="在每台机器的上键入"></a>在每台机器的上键入</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/hostname</span><br></pre></td></tr></table></figure>
+<h3 id="之后就可以通过su-hadoop-切换到该用户"><a href="#之后就可以通过su-hadoop-切换到该用户" class="headerlink" title="之后就可以通过su hadoop 切换到该用户"></a>之后就可以通过su hadoop 切换到该用户</h3><h2 id="三-配置host文件将不同主机链接起来"><a href="#三-配置host文件将不同主机链接起来" class="headerlink" title="三.配置host文件将不同主机链接起来"></a>三.配置host文件将不同主机链接起来</h2><h3 id="由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3-通过修改hostname"><a href="#由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3-通过修改hostname" class="headerlink" title="由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3(通过修改hostname)"></a>由于分布式系统拥有主节点与从节点，那么对应的命名以及对应ip配置是必不可少的，假设我们的集群有四个节点，那么分别命名为master，slave1，slave2，以及slave3(通过修改hostname)</h3><h4 id="在每台机器的上键入"><a href="#在每台机器的上键入" class="headerlink" title="在每台机器的上键入"></a>在每台机器的上键入</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/hostname</span><br></pre></td></tr></table></figure>
 <h4 id="然后进行对主机名的重命名，例如在主节点的主机上我们可以修改为："><a href="#然后进行对主机名的重命名，例如在主节点的主机上我们可以修改为：" class="headerlink" title="然后进行对主机名的重命名，例如在主节点的主机上我们可以修改为："></a>然后进行对主机名的重命名，例如在主节点的主机上我们可以修改为：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname  master</span><br></pre></td></tr></table></figure>
 <h4 id="修改-etc-hosts-使得每台机器的ip与对应的hostname一一对应，默认将出现在第二行的127-0-0-1-修改为如下（分布式）："><a href="#修改-etc-hosts-使得每台机器的ip与对应的hostname一一对应，默认将出现在第二行的127-0-0-1-修改为如下（分布式）：" class="headerlink" title="修改/etc/hosts 使得每台机器的ip与对应的hostname一一对应，默认将出现在第二行的127.0.0.1 修改为如下（分布式）："></a>修改/etc/hosts 使得每台机器的ip与对应的hostname一一对应，默认将出现在第二行的127.0.0.1 修改为如下（分布式）：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">master的ip master</span><br><span class="line">slave1的ip slave1</span><br><span class="line">slave2的ip slave2</span><br><span class="line">slave3的ip slave3</span><br></pre></td></tr></table></figure>
 <h2 id="四-建议关闭防火墙以及IPV6"><a href="#四-建议关闭防火墙以及IPV6" class="headerlink" title="四.建议关闭防火墙以及IPV6"></a>四.建议关闭防火墙以及IPV6</h2><h2 id="五-配置ssh进行节点之间无密码交互"><a href="#五-配置ssh进行节点之间无密码交互" class="headerlink" title="五.配置ssh进行节点之间无密码交互"></a>五.配置ssh进行节点之间无密码交互</h2><h3 id="由于hadoop分布式结构，其中namenode以及各个datanode之间都会进行ipc网络通信，在每次进行交互式，为了避免每次都输入密码，因此都设置成ssh无密码来交互"><a href="#由于hadoop分布式结构，其中namenode以及各个datanode之间都会进行ipc网络通信，在每次进行交互式，为了避免每次都输入密码，因此都设置成ssh无密码来交互" class="headerlink" title="由于hadoop分布式结构，其中namenode以及各个datanode之间都会进行ipc网络通信，在每次进行交互式，为了避免每次都输入密码，因此都设置成ssh无密码来交互"></a>由于hadoop分布式结构，其中namenode以及各个datanode之间都会进行ipc网络通信，在每次进行交互式，为了避免每次都输入密码，因此都设置成ssh无密码来交互</h3><h4 id="检查openssh-server（每台机器上）"><a href="#检查openssh-server（每台机器上）" class="headerlink" title="检查openssh-server（每台机器上）"></a>检查openssh-server（每台机器上）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
@@ -235,7 +235,7 @@
             </a>
         </div>
         
-        <div class="post-tags">标签：
+        <div class="post-tags">Tags：
             
         </div>
         
@@ -256,7 +256,7 @@
            </span>
         </P>
         <p>
-            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <!-- 自定义链接 -->
             <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
