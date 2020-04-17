@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+//                            _ooOoo_
+//                           o8888888o
+//                           88" . "88
+//                           (| -_- |)
+//                            O\ = /O
+//                        ____/`---'\____
+//                      .   ' \\| |// `.
+//                       / \\||| : |||// \
+//                     / _||||| -:- |||||- \
+//                       | | \\\ - /// | |
+//                     | \_| ''\---/'' | |
+//                      \ .-\__ `-` ___/-. /
+//                   ___`. .' /--.--\ `. . __
+//                ."" '< `.___\_<|>_/___.' >'"".
+//               | | : `- \`.;`\ _ /`;.`/ - ` : | |
+//                 \ \ `-. \_ __\ /__ _/ .-` / /
+//         ======`-.____`-.___\_____/___.-`____.-'======
+//                            `=---='
+//                 拦截插件累计拦截逗比攻击"1381438"次！
+//         .............................................
+//                  佛祖保佑             永无BUG
+//          佛曰:
+//                  写字楼里写字间，写字间里程序员；
+//                  程序人员写程序，又拿程序换酒钱。
+//                  酒醒只在网上坐，酒醉还来网下眠；
+//                  酒醉酒醒日复日，网上网下年复年。
+//                  但愿老死电脑间，不愿鞠躬老板前；
+//                  奔驰宝马贵者趣，公交自行程序员。
+//                  别人笑我忒疯癫，我笑自己命太贱；
+//                  不见满街漂亮妹，哪个归得程序员？
+-->
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://Zxiaoyu95.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://Zxiaoyu95.github.io">
+<meta name="author" content="Zxiaoyu">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>hadoop微服务集群搭建 - 子非鱼博客</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="记录学习点滴">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">说IT</h1>
+        <h3 class="cover-siteTitle">做产品，写代码</h3>
+        <p class="cover-siteDesc">一个关注信息安全技术与人文的IT博客</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-telegram">
+                <a href="http://t.me/kunyintang" target="_blank" title="telegram" ref="friend">
+                    <i class="fa fa-telegram"></i>
+                </a>
+            </div>
+            
+            <div class="btn btn-instagram">
+                <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+            
+            <div class="btn btn-twitter">
+                <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+        
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="" target="_blank">
+                    <img width="48" src="" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="" target="_blank"></a>
+                    <span title="最后编辑于2020-04-17">2020-04-17</span>
+                </p>
+                <p></p>
+            </div>
+            <h2 class="post-title">hadoop微服务集群搭建</h2>
+            <div class="post-meta">
+                本文总共4365个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="引言：最近微服务发展迅速，利用docker的轻量级共享宿主机资源的特性，容器中运行程序以及部署环境是十分快捷的！不同于虚拟机的严格隔离环境，docker利用一个固有的守护进程就可以创建出隔离性能优良的容器环境（namespace-cgroup）。最近由于疫情的延续，实验环境限制了很多计划，hadoop集群不能正常使用，于是利用IBM-cloud上面的server（支持SGX），结合docker技术创建了hadoop2-7集群（暂时八个节点），IBM-server内存2-16G，3-8GHz-Intel-Xeon-KabyLake-E3-1270-V6-Quadcore-，磁盘1-7T，由于踩过不少坑，所以还是打算记录一下步骤："><a href="#引言：最近微服务发展迅速，利用docker的轻量级共享宿主机资源的特性，容器中运行程序以及部署环境是十分快捷的！不同于虚拟机的严格隔离环境，docker利用一个固有的守护进程就可以创建出隔离性能优良的容器环境（namespace-cgroup）。最近由于疫情的延续，实验环境限制了很多计划，hadoop集群不能正常使用，于是利用IBM-cloud上面的server（支持SGX），结合docker技术创建了hadoop2-7集群（暂时八个节点），IBM-server内存2-16G，3-8GHz-Intel-Xeon-KabyLake-E3-1270-V6-Quadcore-，磁盘1-7T，由于踩过不少坑，所以还是打算记录一下步骤：" class="headerlink" title="引言：最近微服务发展迅速，利用docker的轻量级共享宿主机资源的特性，容器中运行程序以及部署环境是十分快捷的！不同于虚拟机的严格隔离环境，docker利用一个固有的守护进程就可以创建出隔离性能优良的容器环境（namespace+cgroup）。最近由于疫情的延续，实验环境限制了很多计划，hadoop集群不能正常使用，于是利用IBM cloud上面的server（支持SGX），结合docker技术创建了hadoop2.7集群（暂时八个节点），IBM server内存2*16G，3.8GHz Intel Xeon-KabyLake(E3-1270-V6-Quadcore)，磁盘1.7T，由于踩过不少坑，所以还是打算记录一下步骤："></a>引言：最近微服务发展迅速，利用docker的轻量级共享宿主机资源的特性，容器中运行程序以及部署环境是十分快捷的！不同于虚拟机的严格隔离环境，docker利用一个固有的守护进程就可以创建出隔离性能优良的容器环境（namespace+cgroup）。最近由于疫情的延续，实验环境限制了很多计划，hadoop集群不能正常使用，于是利用IBM cloud上面的server（支持SGX），结合docker技术创建了hadoop2.7集群（暂时八个节点），IBM server内存2*16G，3.8GHz Intel Xeon-KabyLake(E3-1270-V6-Quadcore)，磁盘1.7T，由于踩过不少坑，所以还是打算记录一下步骤：</h3><h2 id="一-集群环境"><a href="#一-集群环境" class="headerlink" title="一.集群环境"></a>一.集群环境</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">172.18.12.10      Master</span><br><span class="line">172.18.12.11      slave1</span><br><span class="line">172.18.12.12      slave2</span><br><span class="line">172.18.12.13      slave3</span><br><span class="line">172.18.12.14      slave4</span><br><span class="line">172.18.12.15      slave5</span><br><span class="line">172.18.12.16      slave6</span><br><span class="line">172.18.12.17      slave7</span><br></pre></td></tr></table></figure>
+<h2 id="二-开始创建"><a href="#二-开始创建" class="headerlink" title="二.开始创建"></a>二.开始创建</h2><h4 id="创建docker桥接ip段，在linux终端下键入以下命令（默认docker已经安装成功：curl-fssl-https-raw-githubusercontent-com-SconeDocs-SH-master-install-docker-sh-bash）"><a href="#创建docker桥接ip段，在linux终端下键入以下命令（默认docker已经安装成功：curl-fssl-https-raw-githubusercontent-com-SconeDocs-SH-master-install-docker-sh-bash）" class="headerlink" title="创建docker桥接ip段，在linux终端下键入以下命令（默认docker已经安装成功：curl -fssl https://raw.githubusercontent.com/SconeDocs/SH/master/install_docker.sh | bash）"></a>创建docker桥接ip段，在linux终端下键入以下命令（默认docker已经安装成功：curl -fssl <a href="https://raw.githubusercontent.com/SconeDocs/SH/master/install_docker.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/SconeDocs/SH/master/install_docker.sh</a> | bash）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker network create --driver bridge --subnet=172.18.12.0/16 --gateway=172.18.1.1 mynet</span><br><span class="line">docker network inspect mynet</span><br></pre></td></tr></table></figure>
+<h4 id="创建容器（里面有的参数是实验需要，比如挂载、端口）"><a href="#创建容器（里面有的参数是实验需要，比如挂载、端口）" class="headerlink" title="创建容器（里面有的参数是实验需要，比如挂载、端口）"></a>创建容器（里面有的参数是实验需要，比如挂载、端口）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run --privileged  --device=/dev/isgx --name Master --hostname Master --network=mynet --ip 172.18.12.10 -d -P -p 50070:50070 -p 8088:8088 -v /home/xidian/class:/home/ -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave1 --hostname slave1 --network=mynet --ip 172.18.12.11 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave2 --hostname slave2 --network=mynet --ip 172.18.12.12 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave3 --hostname slave3 --network=mynet --ip 172.18.12.13 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave4 --hostname slave4 --network=mynet --ip 172.18.12.14 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave5 --hostname slave5 --network=mynet --ip 172.18.12.15 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave6 --hostname slave6 --network=mynet --ip 172.18.12.16 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br><span class="line">sudo docker run --privileged  --device=/dev/isgx --name slave7 --hostname slave7 --network=mynet --ip 172.18.12.17 -d -P  -it xiaoyuzhang321/scone_mr:SGXhadoop2.7new /etc/bootstrap.sh -bash</span><br></pre></td></tr></table></figure>
+<h3 id="进入容器命令（以Master为例）"><a href="#进入容器命令（以Master为例）" class="headerlink" title="进入容器命令（以Master为例）"></a>进入容器命令（以Master为例）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it Master /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="创建hosts脚本（因为每次重新进入容器-etc-hosts-中的ip-username会清空，我们每次进入需要执行脚本）"><a href="#创建hosts脚本（因为每次重新进入容器-etc-hosts-中的ip-username会清空，我们每次进入需要执行脚本）" class="headerlink" title="创建hosts脚本（因为每次重新进入容器 /etc/hosts 中的ip username会清空，我们每次进入需要执行脚本）"></a>创建hosts脚本（因为每次重新进入容器 /etc/hosts 中的ip username会清空，我们每次进入需要执行脚本）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vi runhosts.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> 172.18.12.10    Master &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.11    slave1 &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.12    slave2 &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.13    slave3 &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.14    slave4 &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.15    slave5 &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.16    slave6 &gt;&gt;/etc/hosts  </span><br><span class="line"><span class="built_in">echo</span> 172.18.12.17    slave7 &gt;&gt;/etc/hosts </span><br><span class="line"></span><br><span class="line">chmod +x runhosts.sh</span><br><span class="line">./runhosts.sh</span><br></pre></td></tr></table></figure>
+<h3 id="下面关键是ssh配置"><a href="#下面关键是ssh配置" class="headerlink" title="下面关键是ssh配置"></a>下面关键是ssh配置</h3><h4 id="1-Master容器中执行："><a href="#1-Master容器中执行：" class="headerlink" title="1.Master容器中执行："></a>1.Master容器中执行：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line">cat id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br><span class="line">chmod 700 ~/.ssh/</span><br></pre></td></tr></table></figure>
+<h4 id="2-每台slave容器中执行："><a href="#2-每台slave容器中执行：" class="headerlink" title="2.每台slave容器中执行："></a>2.每台slave容器中执行：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line">cat id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br><span class="line">chmod 700 ~/.ssh/</span><br><span class="line">ssh-copy-id -i id_rsa.pub Master</span><br></pre></td></tr></table></figure>
+<h4 id="3-Master容器中执行："><a href="#3-Master容器中执行：" class="headerlink" title="3.Master容器中执行："></a>3.Master容器中执行：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp ~/.ssh/authorized_keys slave1:~/.ssh/authorized_keys</span><br><span class="line">scp ~/.ssh/authorized_keys slave2:~/.ssh/authorized_keys</span><br><span class="line">.....</span><br><span class="line">scp ~/.ssh/authorized_keys slave7:~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<h3 id="配置hadoop完全分布式环境"><a href="#配置hadoop完全分布式环境" class="headerlink" title="配置hadoop完全分布式环境"></a>配置hadoop完全分布式环境</h3><h4 id="1-修改core-site-xml"><a href="#1-修改core-site-xml" class="headerlink" title="1.修改core-site.xml"></a>1.修改core-site.xml</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">修改namenode为Master（原来是localhost）</span><br><span class="line">添加（路径自己按照自己需要改）：</span><br><span class="line">&lt;property&gt;                    </span><br><span class="line">   &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;           </span><br><span class="line">   &lt;value&gt;/usr/<span class="built_in">local</span>/hadoop/tmp&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2-修改slave（添加为以下）"><a href="#2-修改slave（添加为以下）" class="headerlink" title="2.修改slave（添加为以下）"></a>2.修改slave（添加为以下）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br><span class="line">slave3</span><br><span class="line">slave4</span><br><span class="line">slave5</span><br><span class="line">slave6</span><br><span class="line">slave7</span><br></pre></td></tr></table></figure>
+<h4 id="3-修改yarn-site-xml（添加）"><a href="#3-修改yarn-site-xml（添加）" class="headerlink" title="3.修改yarn-site.xml（添加）"></a>3.修改yarn-site.xml（添加）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;description&gt;The hostname of the RM.&lt;/description&gt;</span><br><span class="line">  &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">  &lt;value&gt;Master&lt;/value&gt;</span><br><span class="line"> &lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="最后在Master容器中执行"><a href="#最后在Master容器中执行" class="headerlink" title="最后在Master容器中执行"></a>最后在Master容器中执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp -rq /usr/<span class="built_in">local</span>/hadoop/etc/hadoop  slave1:/usr/<span class="built_in">local</span>/hadoop/etc</span><br><span class="line">scp -rq /usr/<span class="built_in">local</span>/hadoop/etc/hadoop  slave2:/usr/<span class="built_in">local</span>/hadoop/etc</span><br><span class="line">.....</span><br><span class="line">scp -rq /usr/<span class="built_in">local</span>/hadoop/etc/hadoop  slave7:/usr/<span class="built_in">local</span>/hadoop/etc</span><br></pre></td></tr></table></figure>
+<h2 id="上诉过程有些可以使用脚本来方便执行，比如hosts更新脚本，直接可以在宿主机上为容器启动脚本，在Master开启hadoop以及关闭hadoop等，ssh配置需要技巧，思路首先可以将每个容器的rsa公钥都统一发送到Master，最后Master再统一分发公钥，效率高点，如有不足，虚心讨教哈"><a href="#上诉过程有些可以使用脚本来方便执行，比如hosts更新脚本，直接可以在宿主机上为容器启动脚本，在Master开启hadoop以及关闭hadoop等，ssh配置需要技巧，思路首先可以将每个容器的rsa公钥都统一发送到Master，最后Master再统一分发公钥，效率高点，如有不足，虚心讨教哈" class="headerlink" title="上诉过程有些可以使用脚本来方便执行，比如hosts更新脚本，直接可以在宿主机上为容器启动脚本，在Master开启hadoop以及关闭hadoop等，ssh配置需要技巧，思路首先可以将每个容器的rsa公钥都统一发送到Master，最后Master再统一分发公钥，效率高点，如有不足，虚心讨教哈^^"></a>上诉过程有些可以使用脚本来方便执行，比如hosts更新脚本，直接可以在宿主机上为容器启动脚本，在Master开启hadoop以及关闭hadoop等，ssh配置需要技巧，思路首先可以将每个容器的rsa公钥都统一发送到Master，最后Master再统一分发公钥，效率高点，如有不足，虚心讨教哈^^</h2>
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    
+    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+           <span id="busuanzi_container_site_uv">
+           本站总访问量<span id="busuanzi_value_site_uv"></span>次
+           </span>
+        </P>
+        <p>
+            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="help" >急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/app" title="App下载">App下载</a>
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2018 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，博主<a href="https://www.tangkunyin.com" target="_blank">：章小鱼先森</a>
+            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/01/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>
